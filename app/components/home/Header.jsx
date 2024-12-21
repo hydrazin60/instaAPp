@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   logo: {
-    width: 110,
+    width: 109,
     height: 25,
     color: "white",
   },
