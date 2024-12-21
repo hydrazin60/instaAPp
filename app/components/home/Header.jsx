@@ -83,3 +83,4 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
 });
+/***Instagram Clone** A full-stack Instagram clone built with React Native, Node.js, Express, MongoDB, and Cloudinary. Features include user authentication, posting images, likes, comments, and following/unfollowing users. Inspired by Clever Programmer's tutorials.*/
