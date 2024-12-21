@@ -32,7 +32,6 @@ export default function Header() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   containner: {
     justifyContent: "space-between",
