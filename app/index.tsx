@@ -1,24 +1,14 @@
+import { View, Text } from "react-native";
 import React from "react";
-import { StatusBar, StyleSheet, View } from "react-native";
-import HomeScreen from "./screens/HomeScreen";
-
-export default function Page() {
+import Header from "./components/home/Header";
+import Stories from "./components/home/Stories";
+const index = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="black"
-        translucent={false}
-      />
-      <HomeScreen />
+    <View style={{ padding: 15 }}>
+      <Header />
+      <Stories/>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "black",
-    color: "white",
-  },
-});
+export default index;

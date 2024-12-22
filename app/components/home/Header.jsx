@@ -1,85 +1,80 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 import React from "react";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-export default function Header() {
+
+const Header = () => {
   return (
     <View style={styles.containner}>
-      <TouchableOpacity>
-        <Image
-          source={require("../../assets/image/instagram_namee.png")}
-          style={styles.logo}
-        />
-      </TouchableOpacity>
-      <View style={styles.itemContainner}>
-        <TouchableOpacity style={styles.logoContainner}>
-          <View style={styles.LoveNotificationCount}></View>
-          <AntDesign name="hearto" size={24} color="white" />
+      <View>
+        <TouchableOpacity>
+          <Image
+            source={require("../../assets/image/instagram_namee.png")}
+            style={styles.logo}
+          />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.logoContainner}>
-          <View style={styles.MessageLogoContainner}>
+      </View>
+      <View style={styles.IconContainner}>
+        <TouchableOpacity style={styles.LoveCOntainner}>
+          <View style={styles.LoveRedDot}></View>
+          <AntDesign name="hearto" size={26} color="white" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.LoveCOntainner}>
+          <View style={styles.messageCountShow}>
             <Text style={{ color: "white" }}>11</Text>
           </View>
           <MaterialCommunityIcons
             name="facebook-messenger"
-            size={24}
-            color="black"
-            backgroundColor="white"
-            style={{ borderRadius: 50 }}
+            size={30}
+            color="white"
           />
         </TouchableOpacity>
       </View>
     </View>
   );
-}
+};
+
+export default Header;
+
 const styles = StyleSheet.create({
   containner: {
+    flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    flexDirection: "row",
-    marginTop: 10,
-    paddingHorizontal: 10,
   },
   logo: {
-    width: 109,
-    height: 25,
-    color: "white",
+    width: 120,
+    height: 20,
   },
-  itemContainner: {
+  IconContainner: {
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
     gap: 20,
   },
-  logoContainner: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-  },
-  LoveNotificationCount: {
-    top: 1,
-    right: -3,
-    position: "absolute",
+  LoveRedDot: {
     backgroundColor: "red",
-    borderRadius: 50,
     width: 10,
     height: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 1,
-  },
-  MessageLogoContainner: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    height: 15,
-    width: 20,
-    backgroundColor: "red",
     borderRadius: 50,
     position: "absolute",
-    top: -5,
-    right: -6,
+    top: 0,
+    right: 0,
     zIndex: 1,
   },
+  LoveCOntainner: {
+    position: "relative",
+  },
+  messageCountShow: {
+    backgroundColor: "red",
+    width: 20,
+    height: 20,
+    borderRadius: 50,
+    position: "absolute",
+    top: -7,
+    right: -5,
+    zIndex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
-/***Instagram Clone** A full-stack Instagram clone built with React Native, Node.js, Express, MongoDB, and Cloudinary. Features include user authentication, posting images, likes, comments, and following/unfollowing users. Inspired by Clever Programmer's tutorials.*/
